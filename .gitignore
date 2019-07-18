@@ -19,7 +19,6 @@ Tools/webb2burkey-rope
 VirtualAGC/VirtualAGC
 VirtualAGC/temp
 yaAGC/yaAGC
-yaAGC/core
 yaAGS/yaAGS
 yaLEMAP/SampleCodeAGS.bin
 yaLEMAP/SampleCodeAGS.lst
@@ -73,3 +72,4 @@ yaAGC-Block1-Pultorak/yaAGC-Block1
 yaAGCb1/test.agc.pad
 yaAGCb1/yaAGCb1
 yaUplinkBlock1/yaUplinkBlock1
+core
