@@ -140,34 +140,21 @@ extern "C" {
 #include <stdio.h>
 
 // The following is used to get the int16_t datatype.
-#ifdef WIN32
-// Win32
-typedef short int16_t;
-typedef signed char int8_t;
-typedef unsigned char uint8_t; // 20170326
-typedef unsigned int uint32_t; // 20170326
-typedef unsigned short uint16_t; // 20170329
-#ifdef __MINGW32__
-typedef unsigned long long uint64_t;
-#else
-typedef unsigned __int64 uint64_t;
-#endif
-#elif defined (__embedded__)
+#ifdef __embedded__
 // Embedded, gcc cross-compiler.
 typedef short int16_t;
 typedef signed char int8_t;
 typedef unsigned short uint16_t;
-#elif defined (SDCC)
+#elif defined(SDCC)
 // SDCC (8-bit 8051)
 typedef int int16_t;
 typedef signed char int8_t;
 typedef unsigned uint16_t;
 extern long random (void);
-#else // WIN32
-// All other (Linux, Mac OS, etc.)
-//#include <sys/types.h>
+#else // __embedded__
+// All other (Linux, Mac OS, Windows, etc.)
 #include <stdint.h>
-#endif // WIN32
+#endif // __embedded__
 
 // For socket connections.
 #ifdef WIN32
