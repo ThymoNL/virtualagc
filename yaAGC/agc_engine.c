@@ -1873,12 +1873,6 @@ agc_engine (agc_t * State)
       State->DownruptTimeValid = 0;
     }
 
-  // The first time through the loop, light up the DSKY RESTART light
-  if (State->CycleCounter == 0)
-    {
-      State->RestartLight = 1;
-    }
-
   State->CycleCounter++;
 
   //----------------------------------------------------------------------

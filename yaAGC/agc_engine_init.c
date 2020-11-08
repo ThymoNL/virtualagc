@@ -294,7 +294,7 @@ agc_engine_init (agc_t * State, const char *RomImage, const char *CoreDump,
   State->WarningFilter = 0;
   State->GeneratedWarning = 0;
 
-  State->RestartLight = 0;
+  State->RestartLight = 1;
   State->Standby = 0;
   State->SbyPressed = 0;
   State->SbyStillPressed = 0;
